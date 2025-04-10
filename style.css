@@ -1,0 +1,91 @@
+/* style.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('laundry-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  header .logo img {
+    height: 100px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  nav a:hover {
+    color: #0077cc;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #28a745;
+    padding: 12px 25px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #218838;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #eee;
+    color: #333;
+  }
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
