@@ -1,0 +1,33 @@
+.layanan-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .layanan-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .layanan-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .layanan-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .layanan-card p {
+    font-size: 0.95em;
+    margin: 5px 0;
+  }
+  

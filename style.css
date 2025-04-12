@@ -1,91 +1,197 @@
-/* style.css */
+/* style.css - Hanya Background yang Diubah */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('laundry-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-  }
-  
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #333;
-  }
-  
-  header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  header .logo img {
-    height: 100px;
-  }
-  
-  header h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #333;
-  }
-  
-  nav a:hover {
-    color: #0077cc;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 100px 20px;
-  }
-  
-  .hero h2 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-  }
-  
-  .hero p {
-    font-size: 1.3em;
-    margin-bottom: 30px;
-  }
-  
-  .cta-button {
-    background-color: #28a745;
-    padding: 12px 25px;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #218838;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: #eee;
-    color: #333;
-  }
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff; /* Background putih solid */
+  color: hsl(0, 0%, 0%);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  height: 100px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+}
+
+nav a:hover {
+  color: #0077cc;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #28a745;
+  padding: 12px 25px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #218838;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+  color: #333;
+}
+
 @media (max-width: 600px) {
   .container {
-    flex-direction: column;
-    padding: 10px;
+      flex-direction: column;
+      padding: 10px;
   }
 
   h1 {
-    font-size: 24px;
+      font-size: 24px;
   }
+}
+
+.image-gallery {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.image-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.image-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-row img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-text {
+  max-width: 400px;
+}
+
+.image-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.image-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Hamburger Style */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  nav {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 80px;
+      right: 20px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+  }
+
+  nav.show {
+      display: flex;
+  }
+
+  .hamburger {
+      display: block;
+  }
+}
+
+.layanan-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+}
+
+.layanan-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.layanan-card:hover {
+  transform: translateY(-5px);
+}
+
+.layanan-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.layanan-card p {
+  font-size: 0.95em;
+  margin: 5px 0;
 }

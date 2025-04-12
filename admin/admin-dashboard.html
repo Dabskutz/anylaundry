@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Update Harga Layanan</h2>
+
+    <div class="form-group">
+      <label>Laundry Kiloan</label>
+      <input type="text" id="harga-kiloan">
+    </div>
+
+    <div class="form-group">
+      <label>Laundry Satuan</label>
+      <input type="text" id="harga-satuan">
+    </div>
+
+    <div class="form-group">
+      <label>Laundry Express</label>
+      <input type="text" id="harga-express">
+    </div>
+
+    <div class="form-group">
+      <label>Laundry Premium</label>
+      <input type="text" id="harga-premium">
+    </div>
+
+    <button onclick="simpanHarga()">Simpan Harga</button>
+    <p id="status-msg"></p>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
