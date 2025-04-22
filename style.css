@@ -261,3 +261,18 @@ footer {
   margin: 40px auto;
   padding: 0 20px;
 }
+
+.btn-pesan {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* warna biru */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-pesan:hover {
+  background-color: #0056b3; /* warna biru lebih gelap saat hover */
+}

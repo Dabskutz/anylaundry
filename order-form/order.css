@@ -1,0 +1,123 @@
+/* Global style */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Form container */
+  .form-box {
+    background: white;
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+  }
+  
+  /* Heading */
+  .form-box h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Inputs */
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  /* Label */
+  .label-metode {
+    font-size: 14px;
+    margin: 20px 0 10px;
+    color: #555;
+  }
+  
+  /* Payment Icons */
+  .payment-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
+    margin-bottom: 20px;
+  }
+  
+  .payment-icons img {
+    height: 30px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  /* Buttons */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    width: 48%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cancel {
+    background: #f76c6c;
+    color: white;
+  }
+  
+  .pay {
+    background: #4a90e2;
+    color: white;
+  }
+  
+  /* Mobile Support */
+  @media screen and (max-width: 480px) {
+    .form-box {
+      padding: 20px;
+    }
+  
+    .btn {
+      font-size: 14px;
+    }
+  
+    .payment-icons img {
+      height: 26px;
+    }
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #777474;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fdfbfb;
+  }

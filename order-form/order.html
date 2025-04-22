@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id" ng-app="orderApp" ng-controller="OrderController">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pembayaran Laundry</title>
+  <link rel="stylesheet" href="order.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+
+<div class="form-box">
+  <h2>PAYMENT</h2>
+  <form name="orderForm" ng-submit="submitForm()">
+    <input type="text" placeholder="Nama" ng-model="form.nama" required>
+    <input type="text" placeholder="Alamat" ng-model="form.alamat" required>
+    <input type="text" placeholder="Handphone" ng-model="form.hp" required>
+
+    <select ng-model="form.layanan" required>
+      <option value="" disabled selected>Pilih Jenis Layanan</option>
+      <option value="Laundry Kiloan - Rp7.000/kg">Laundry Kiloan - Rp7.000/kg</option>
+      <option value="Laundry Satuan - Mulai Rp5.000/item">Laundry Satuan - Mulai Rp5.000/item</option>
+      <option value="Laundry Express - Rp10.000/kg">Laundry Express - Rp10.000/kg</option>
+      <option value="Laundry Premium - Rp15.000/kg">Laundry Premium - Rp15.000/kg</option>
+    </select>
+
+    <textarea placeholder="Catatan" ng-model="form.catatan"></textarea>
+
+    <div class="button-group">
+      <button type="button" class="btn cancel" ng-click="cancel()">Batal</button>
+      <button type="submit" class="btn pay">Kirim via WhatsApp</button>
+    </div>
+  </form>
+</div>
+
+<script>
+
+angular.module('orderApp', [])
+    .controller('OrderController', ['$scope', function($scope) {
+      $scope.form = {};
+
+      // ✅ Pindah init() ke dalam controller
+      $scope.init = function() {
+        const params = new URLSearchParams(window.location.search);
+        const layanan = params.get('layanan');
+        if (layanan) {
+          $scope.form.layanan = layanan;
+        }
+      };
+
+      // ✅ Panggil init() setelah definisi
+      $scope.init();
+
+      $scope.submitForm = function() {
+        const phoneNumber = "6285694469084"; // Ganti dengan nomor WhatsApp bisnismu
+
+        const message = 
+`Halo Wacuci Laundry 👋
+
+Saya ingin melakukan pemesanan laundry dengan detail berikut:
+
+👤 Nama: ${$scope.form.nama}
+📱 No. HP: ${$scope.form.hp}
+🏠 Alamat: ${$scope.form.alamat}
+🧺 Layanan: ${$scope.form.layanan}
+📝 Catatan: ${$scope.form.catatan || '-'}
+
+Mohon konfirmasinya ya, terima kasih 🙏`;
+
+        const encodedMessage = encodeURIComponent(message);
+        const waLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        window.open(waLink, "_blank");
+      };
+
+      $scope.cancel = function() {
+        $scope.form = {};
+      };
+    }]);
+</script>
+</body>
+</html>
