@@ -133,10 +133,10 @@ footer {
 /* Hamburger Style */
 .hamburger {
   display: none;
-  font-size: 28px;
+  font-size: 29px;
   background: none;
   border: none;
-  color: #333;
+  color: #272727;
   cursor: pointer;
 }
 
@@ -250,8 +250,8 @@ footer {
 }
 
 .contact-logo {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
@@ -276,14 +276,109 @@ footer {
 .btn-pesan:hover {
   background-color: #0056b3; /* warna biru lebih gelap saat hover */
 }
-.tentang-container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 24px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.7;
-  color: #333;
+
+/* Default layout untuk desktop */
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.image-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.image-row img {
+  width: 45%;
+}
+
+.image-text {
+  width: 50%;
+  padding: 0 20px;
+}
+
+/* Kalau baris dibalik */
+.image-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* RESPONSIVE LAYOUT UNTUK MOBILE */
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .image-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-row img,
+  .image-text {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+/* SIDEBAR NAV UNTUK MOBILE */
+nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.6); /* transparan */
+  flex-direction: column;
+  padding: 40px 20px;
+  gap: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  z-index: 999;
+  display: flex;
+}
+
+/* Saat diklik, geser masuk dari kiri */
+nav.show {
+  left: 0;
+}
+
+/* Tombol hamburger tetap di kiri atas */
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* DESKTOP MODE */
+@media (min-width: 768px) {
+  nav {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    gap: 30px;
+    left: auto;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
