@@ -276,3 +276,14 @@ footer {
 .btn-pesan:hover {
   background-color: #0056b3; /* warna biru lebih gelap saat hover */
 }
+.tentang-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
