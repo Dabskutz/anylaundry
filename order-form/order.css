@@ -1,23 +1,25 @@
 /* Global style */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f4f4 url('payment.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
   
   /* Form container */
   .form-box {
-    background: white;
+    background: rgba(0, 0, 0, 0.61);
     width: 90%;
     max-width: 450px;
     padding: 30px;
     border-radius: 16px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
   }
   
@@ -26,7 +28,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #333;
+    color: #fcf7f7;
   }
   
   /* Inputs */
