@@ -3,8 +3,8 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #ffffff; /* Background putih solid */
-  color: hsl(0, 0%, 0%);
+  background: #f7f7f7; /* Background soft grey untuk tampilan lebih modern */
+  color: hsl(0, 0%, 20%); /* Warna teks lebih gelap untuk kontras yang lebih baik */
 }
 
 header {
@@ -12,7 +12,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8); /* Sedikit transparansi pada background header */
   color: #333;
 }
 
@@ -44,12 +44,13 @@ nav a:hover {
 
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px; /* Perbesar padding untuk tampilan lebih elegan */
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), rgba(255, 255, 255, 0.7)); /* Background gradien pada hero section */
 }
 
 .hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
+  font-size: 2.8em; /* Meningkatkan ukuran font untuk tampilan yang lebih mencolok */
+  margin-bottom: 20px;
 }
 
 .hero p {
@@ -75,7 +76,7 @@ nav a:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background: #eee;
+  background: #f1f1f1; /* Menggunakan warna abu-abu terang untuk footer */
   color: #333;
 }
 
@@ -169,7 +170,7 @@ footer {
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
-  background-color: #f8f8f8;
+  background-color: #f1f1f1; /* Background lebih cerah untuk layanan */
 }
 
 .layanan-card {
@@ -256,6 +257,7 @@ footer {
   object-fit: cover;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
+
 .map-container {
   max-width: 900px;
   margin: 40px auto;
@@ -265,7 +267,7 @@ footer {
 .btn-pesan {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff; /* warna biru */
+  background-color: #007bff; /* Warna biru */
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -274,8 +276,9 @@ footer {
 }
 
 .btn-pesan:hover {
-  background-color: #0056b3; /* warna biru lebih gelap saat hover */
+  background-color: #0056b3; /* Biru lebih gelap saat hover */
 }
+
 .tentang-container {
   max-width: 800px;
   margin: 40px auto;
